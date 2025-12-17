@@ -20,9 +20,30 @@
     <!-- start Content-Security-Policy -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'none'; script-src 'self' cdn-cookieyes.com; style-src 'self' 'unsafe-inline'; connect-src 'self' *.cookieyes.com cdn-cookieyes.com; img-src 'self' cdn-cookieyes.com; object-src 'none'; font-src 'self';"
+      content="
+    default-src 'self';
+    script-src
+      'self'
+      cdn-cookieyes.com
+      www.googletagmanager.com
+      www.google-analytics.com;
+    style-src 'self' 'unsafe-inline';
+    connect-src
+      'self'
+      *.cookieyes.com
+      cdn-cookieyes.com
+      www.google-analytics.com
+      region1.google-analytics.com;
+    img-src
+      'self'
+      cdn-cookieyes.com
+      www.google-analytics.com;
+    font-src 'self';
+    object-src 'none';
+  "
     />
     <!-- end Content-Security-Policy -->
+
     <title>My Static Website</title>
     <link rel="stylesheet" href="style.css" />
   </head>
